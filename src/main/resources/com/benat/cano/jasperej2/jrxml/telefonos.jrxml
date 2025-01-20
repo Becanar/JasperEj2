@@ -5,7 +5,7 @@
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="2.jrdax"/>
 	<parameter name="dni" class="java.lang.String"/>
 	<queryString language="SQL">
-		<![CDATA[select dni,telefono from telefono where dni =$P{dni}]]>
+		<![CDATA[select dni,telefono from telefono where dni=$P{dni}]]>
 	</queryString>
 	<field name="dni" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="dni"/>
@@ -18,34 +18,9 @@
 		<property name="com.jaspersoft.studio.field.tree.path" value="telefono"/>
 	</field>
 	<background>
-		<band/>
-	</background>
-	<title>
-		<band height="72">
-			<staticText>
-				<reportElement mode="Opaque" x="50" y="0" width="494" height="55" forecolor="#006699" backcolor="#E6E6E6" uuid="8d1d7af6-a72a-4795-9cbf-6b108003e99e">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e296e05-e1de-4ebe-8131-5c0eb986cb22"/>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="40" isBold="true"/>
-				</textElement>
-				<text><![CDATA[TELEFONOS]]></text>
-			</staticText>
-		</band>
-	</title>
-	<detail>
-		<band height="41">
-			<textField textAdjust="StretchHeight">
-				<reportElement x="50" y="-10" width="494" height="40" uuid="48a7ea3f-27be-4975-92b7-19fc83c42267">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e296e05-e1de-4ebe-8131-5c0eb986cb22"/>
-				</reportElement>
-				<textElement>
-					<font size="28"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
-			</textField>
+		<band height="10">
 			<line>
-				<reportElement x="50" y="30" width="494" height="1" forecolor="#666666" uuid="f1cb6791-903f-4447-9447-b47fd5c34245">
+				<reportElement x="50" y="0" width="230" height="1" forecolor="#666666" uuid="f1cb6791-903f-4447-9447-b47fd5c34245">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
@@ -53,6 +28,32 @@
 					<pen lineWidth="5.0"/>
 				</graphicElement>
 			</line>
+		</band>
+	</background>
+	<title>
+		<band height="31">
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="0" width="230" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="8d1d7af6-a72a-4795-9cbf-6b108003e99e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e296e05-e1de-4ebe-8131-5c0eb986cb22"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="21">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="50" y="0" width="230" height="20" uuid="48a7ea3f-27be-4975-92b7-19fc83c42267">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e296e05-e1de-4ebe-8131-5c0eb986cb22"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
