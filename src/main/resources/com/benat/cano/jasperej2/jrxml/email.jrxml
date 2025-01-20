@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="email" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="813cd944-323c-41af-85bd-a91045069ece">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="2.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[select email,dni from email]]>
+	</queryString>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="email"/>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dni"/>
+		<property name="com.jaspersoft.studio.field.label" value="dni"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="email"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="0" width="494" height="55" forecolor="#006699" backcolor="#E6E6E6" uuid="e3907f85-7de0-4fdf-8363-8a6a52baf819">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e296e05-e1de-4ebe-8131-5c0eb986cb22"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="40" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="50">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="50" y="-10" width="494" height="41" uuid="53999a9d-8444-49c4-afbb-a4c0c8526a7b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e296e05-e1de-4ebe-8131-5c0eb986cb22"/>
+				</reportElement>
+				<textElement>
+					<font size="28"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="50" y="30" width="494" height="1" forecolor="#666666" uuid="13baf141-cc1d-49e0-ac96-b828bfd71c47">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
