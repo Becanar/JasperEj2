@@ -17,18 +17,16 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/com/benat/cano/jasperej3/fxml/super.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/com/benat/cano/jasperej2/fxml/agenda.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(false);
-        stage.setWidth(400);
-        stage.setHeight(200);
         try {
-            Image img = new Image(getClass().getResource("/com/benat/cano/jasperej3/img/logo.jpg").toString());
+            Image img = new Image(getClass().getResource("/com/benat/cano/jasperej2/img/agenda.png").toString());
             stage.getIcons().add(img);
         } catch (Exception e) {
             System.out.println("Error al cargar la imagen: " + e.getMessage());
         }
-        stage.setTitle("SuperWomble");
+        stage.setTitle("AGENDA");
         stage.setScene(scene);
         stage.setOnCloseRequest(event -> {
             // Confirmar si es necesario realizar acciones antes de cerrar
