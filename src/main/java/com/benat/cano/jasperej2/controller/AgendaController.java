@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SuperController {
+public class AgendaController {
 
     @FXML
     private Button btGraficos;
@@ -34,7 +34,7 @@ public class SuperController {
     @FXML
     private Button btTabProductos;
 
-    private static final Logger LOGGER = Logger.getLogger(SuperController.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(AgendaController.class.getName());
 
     @FXML
     void infoGraficos(ActionEvent event) {
