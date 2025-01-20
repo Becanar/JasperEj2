@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="personas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7d798a48-fb1f-4641-9c3c-0caf16072d94">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="personas"/>
@@ -106,7 +106,7 @@
 	<summary>
 		<band height="304" splitType="Stretch">
 			<textField>
-				<reportElement x="230" y="270" width="100" height="19" uuid="bf6ea0ec-af06-4365-8038-0f2d90b87c0b"/>
+				<reportElement x="227" y="250" width="100" height="19" uuid="bf6ea0ec-af06-4365-8038-0f2d90b87c0b"/>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<componentElement>
@@ -128,7 +128,7 @@
 								<textElement textAlignment="Left" verticalAlignment="Middle">
 									<font size="13"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+								<textFieldExpression><![CDATA["DNI"]]></textFieldExpression>
 							</textField>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -148,7 +148,7 @@
 								<textElement textAlignment="Left" verticalAlignment="Middle">
 									<font size="13"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+								<textFieldExpression><![CDATA["NOMBRE"]]></textFieldExpression>
 							</textField>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -168,7 +168,7 @@
 								<textElement textAlignment="Left" verticalAlignment="Middle">
 									<font size="13"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{apellido1}]]></textFieldExpression>
+								<textFieldExpression><![CDATA["PRIMER APELLIDO"]]></textFieldExpression>
 							</textField>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">
@@ -188,7 +188,7 @@
 								<textElement textAlignment="Left" verticalAlignment="Middle">
 									<font size="13"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{apellido2}]]></textFieldExpression>
+								<textFieldExpression><![CDATA["SEGUNDO APELLIDO"]]></textFieldExpression>
 							</textField>
 						</jr:tableHeader>
 						<jr:detailCell style="Table_TD" height="30">

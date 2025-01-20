@@ -94,8 +94,12 @@ public class AgendaController {
             } else {
                 if (num == 2) {
                     parameters = new HashMap<>();
-                    LOGGER.log(Level.INFO, "Ruta de la imagen: {0}", db.getClass().getResource("/com/benat/cano/jasperej2/img/logo.jpg").toString());
-                    parameters.put("IMAGE_PATH", db.getClass().getResource("/com/benat/cano/jasperej3/img/logo.jpg").toString());
+                    LOGGER.log(Level.INFO, "Ruta de la primera imagen: {0}", db.getClass().getResource("/com/benat/cano/jasperej2/img/agenda.png").toString());
+                    LOGGER.log(Level.INFO, "Ruta de la segunda imagen: {0}", db.getClass().getResource("/com/benat/cano/jasperej2/img/persona.png").toString());
+                    String imagePath1 = db.getClass().getResource("/com/benat/cano/jasperej2/img/agenda.png").toString();
+                    String imagePath2 = db.getClass().getResource("/com/benat/cano/jasperej2/img/persona.png").toString();
+                    parameters.put("IMAGE_PATH", imagePath1);
+                    parameters.put("IMAGE_PATH_2", imagePath2);
                 } else {
                      parameters = new HashMap<>();
                 }
