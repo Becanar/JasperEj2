@@ -33,12 +33,12 @@
       </VBox>
       <HBox fx:id="boxBotones" alignment="CENTER" prefHeight="74.0" prefWidth="429.0" spacing="50.0">
          <children>
-            <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#accionAceptar" prefHeight="26.0" prefWidth="90.0" text="Aceptar">
+            <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#aceptar" prefHeight="26.0" prefWidth="90.0" text="Aceptar">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="btCancelar" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="26.0" prefWidth="90.0" text="Cancelar">
+            <Button fx:id="btCancelar" mnemonicParsing="false" onAction="#cancelar" prefHeight="26.0" prefWidth="90.0" text="Cancelar">
                <font>
                   <Font size="17.0" />
                </font></Button>

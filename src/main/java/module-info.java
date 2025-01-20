@@ -2,7 +2,7 @@ module com.benat.cano.jasperej2 {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-
+    requires jasperreports;
 
 
     exports com.benat.cano.jasperej2.controller;
