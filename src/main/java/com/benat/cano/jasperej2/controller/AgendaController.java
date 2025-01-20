@@ -64,7 +64,7 @@ public class AgendaController {
         } else if (btCalculos.isSelected()) {
             informe("calculos.jasper", 2);
         } else if (btSub.isSelected()) {
-            informe("subInforme.jasper", 3);
+            informe("agenda.jasper", 3);
         }
 
     }
@@ -102,6 +102,12 @@ public class AgendaController {
                     parameters.put("IMAGE_PATH_2", imagePath2);
                 } else {
                      parameters = new HashMap<>();
+                    LOGGER.log(Level.INFO, "Ruta de la primera jasper: {0}", db.getClass().getResource("/com/benat/cano/jasperej2/jasper/email.jasper").toString());
+                    LOGGER.log(Level.INFO, "Ruta de la segunda jasper: {0}", db.getClass().getResource("/com/benat/cano/jasperej2/jasper/telefonos.jasper").toString());
+                    String imagePath1 = db.getClass().getResource("/com/benat/cano/jasperej2/jasper/email.jasper").toString();
+                    String imagePath2 = db.getClass().getResource("/com/benat/cano/jasperej2/jasper/telefonos.jasper").toString();
+                    parameters.put("SUBINF", imagePath1);
+                    parameters.put("SUBINF2", imagePath2);
                 }
             }
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, db.getConnection());
