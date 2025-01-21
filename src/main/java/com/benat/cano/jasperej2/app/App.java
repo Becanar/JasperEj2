@@ -8,13 +8,16 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
-
 /**
- * La clase principal que arranca la aplicación JavaFX y genera el informe usando JasperReports.
+ * Clase principal de la aplicación JavaFX.
  */
 public class App extends Application {
-
+    /**
+     * Método de inicio que configura y muestra la ventana principal de la aplicación.
+     *
+     * @param stage El escenario principal de la aplicación proporcionado por JavaFX.
+     * @throws IOException Si ocurre un error al cargar el archivo FXML.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/com/benat/cano/jasperej2/fxml/agenda.fxml"));
@@ -36,7 +39,11 @@ public class App extends Application {
         });
         stage.show();
     }
-
+    /**
+     * Método principal de la aplicación. Llama a {@link javafx.application.Application#launch()} para iniciar JavaFX.
+     *
+     * @param args Argumentos de línea de comandos.
+     */
     public static void main(String[] args) {
         Application.launch();
     }

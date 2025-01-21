@@ -21,7 +21,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * Controlador para manejar eventos y lógica de la interfaz de la agenda.
+ */
 public class AgendaController {
 
     private static final Logger LOGGER = Logger.getLogger(AgendaController.class.getName());
@@ -55,7 +57,12 @@ public class AgendaController {
 
     @FXML
     private Label lblInformes;
-
+    /**
+     * Acción para el botón "Aceptar".
+     * Genera un informe basado en la opción seleccionada por el usuario.
+     *
+     * @param event El evento que dispara la acción.
+     */
     @FXML
     void aceptar(ActionEvent event) {
 
@@ -69,14 +76,23 @@ public class AgendaController {
 
     }
 
-
-    // Acción de Cancelar (cierra la aplicación)
+    /**
+     * Acción para el botón "Cancelar".
+     * Cierra la aplicación JavaFX.
+     *
+     * @param event El evento que dispara la acción.
+     */
     @FXML
     void cancelar(ActionEvent event) {
         // Cierra la aplicación
         Platform.exit();
     }
-
+    /**
+     * Genera un informe JasperReports con parámetros personalizados.
+     *
+     * @param jasper Nombre del archivo .jasper que define el informe.
+     * @param num    Identificador para determinar los parámetros del informe.
+     */
     private void informe(String jasper, int num) {
         ConectorDB db;
         try {
@@ -125,12 +141,11 @@ public class AgendaController {
             throw new RuntimeException(e);
         }
     }
-
     /**
-     * Muestra una ventana emergente con un mensaje de error.
+     * Muestra un cuadro de diálogo de error con un título y un mensaje.
      *
-     * @param titulo  El título de la ventana emergente.
-     * @param mensaje El mensaje de error a mostrar.
+     * @param titulo  Título del cuadro de diálogo.
+     * @param mensaje Mensaje del cuadro de diálogo.
      */
     private void mostrarError(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
